@@ -8,6 +8,7 @@
 
 ## Build generated
 build/
+build_lin/
 DerivedData/
 
 ## Various settings
