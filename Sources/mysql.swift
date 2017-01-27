@@ -83,6 +83,5 @@ public func showPlayer(_ request: HTTPRequest, response: HTTPResponse) {
     response.setHeader(.contentType, value: "application/json")
     response.appendBody(string: encoded)
     response.completed()
-    
 }
 
