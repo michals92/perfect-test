@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		711FEC9B1E3BEFA300C05935 /* mysql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FEC991E3BEB3000C05935 /* mysql.swift */; };
 		711FEC9C1E3BEFA700C05935 /* arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FEC971E3BEB0600C05935 /* arguments.swift */; };
+		711FEC9F1E3CDDBB00C05935 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FEC9D1E3CD91700C05935 /* Player.swift */; };
 		OBJ_1000 /* e_des.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_247 /* e_des.c */; };
 		OBJ_1001 /* e_des3.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_248 /* e_des3.c */; };
 		OBJ_1002 /* e_gmp.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_249 /* e_gmp.c */; };
@@ -934,6 +935,7 @@
 /* Begin PBXFileReference section */
 		711FEC971E3BEB0600C05935 /* arguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arguments.swift; sourceTree = "<group>"; };
 		711FEC991E3BEB3000C05935 /* mysql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mysql.swift; sourceTree = "<group>"; };
+		711FEC9D1E3CD91700C05935 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		OBJ_100 /* bn_mul.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_mul.c; sourceTree = "<group>"; };
 		OBJ_101 /* bn_nist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_nist.c; sourceTree = "<group>"; };
@@ -2573,6 +2575,7 @@
 				711FEC971E3BEB0600C05935 /* arguments.swift */,
 				OBJ_739 /* main.swift */,
 				711FEC991E3BEB3000C05935 /* mysql.swift */,
+				711FEC9D1E3CD91700C05935 /* Player.swift */,
 			);
 			name = "perfect-test";
 			path = Sources;
@@ -2927,6 +2930,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				711FEC9F1E3CDDBB00C05935 /* Player.swift in Sources */,
 				711FEC9C1E3BEFA700C05935 /* arguments.swift in Sources */,
 				711FEC9B1E3BEFA300C05935 /* mysql.swift in Sources */,
 				OBJ_1556 /* main.swift in Sources */,

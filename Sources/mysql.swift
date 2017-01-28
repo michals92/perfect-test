@@ -38,14 +38,20 @@ public func showAllPlayers(_ request: HTTPRequest, response: HTTPResponse) {
     let results = dataMysql.storeResults()
 
     //setup an array to store results
-    var resultArray = [[String?]]()
+    var playersArray: [Player] = []
 
-    while let row = results?.next() {
-        resultArray.append(row)
-
+    while let row = results?.next() as? [String] {
+        let player = Player(fromArray: row)
+        playersArray.append(player)
     }
 
-    let encoded = try! resultArray.jsonEncodedString()
+    var jsonPlayers: [[String: Any]] = []
+    for player in playersArray {
+        let encodedPlayer = player.toDictionary()
+        jsonPlayers.append(encodedPlayer)
+    }
+
+    let encoded = try! jsonPlayers.jsonEncodedString()
 
     response.setHeader(.contentType, value: "application/json")
     response.appendBody(string: encoded)
@@ -76,9 +82,14 @@ public func showPlayer(_ request: HTTPRequest, response: HTTPResponse) {
 
     let results = dataMysql.storeResults()
 
-    let row = results?.next() ?? nil
+    guard let playerArray = results?.next() as? [String] else {
+        Log.info(message: "Failure obtaining user array")
+        return
+    }
 
-    let encoded = try! row.jsonEncodedString()
+    let player = Player(fromArray: playerArray)
+
+    let encoded = try! player.toDictionary().jsonEncodedString()
 
     response.setHeader(.contentType, value: "application/json")
     response.appendBody(string: encoded)
